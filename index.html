@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estafómetro · ¿Este mensaje es una estafa?</title>
+<meta name="description" content="Pega un SMS o correo sospechoso y descubre si parece una estafa. El mensaje no sale de tu dispositivo.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="icono.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <a class="marca" href="index.html">Estafómetro</a>
+  <nav aria-label="Principal">
+    <a href="primera-hora.html">Ya he caído</a>
+    <a href="privacidad.html">Privacidad</a>
+  </nav>
+</header>
+
+<main>
+  <section class="portada">
+    <p class="prueba">Versión de prueba</p>
+    <h1>¿Este mensaje es una estafa?</h1>
+    <p class="entradilla">Pega el SMS, WhatsApp o correo. Lo analizamos en tu dispositivo y te explicamos qué tiene de raro. El mensaje nunca se envía a ningún sitio.</p>
+
+    <label for="mensaje">Mensaje sospechoso</label>
+    <textarea id="mensaje" rows="7" spellcheck="false" autocomplete="off" placeholder="Pega aquí el mensaje completo, con el enlace si lo tiene…"></textarea>
+    <div class="acciones">
+      <button id="analizar" class="principal" type="button">Analizar mensaje</button>
+      <button id="limpiar" type="button">Borrar</button>
+    </div>
+    <p class="ejemplos">Probar con un ejemplo:
+      <button type="button" data-ejemplo="paquete">Paquete retenido</button>
+      <button type="button" data-ejemplo="familiar">Hijo en apuros</button>
+      <button type="button" data-ejemplo="normal">Mensaje normal</button>
+    </p>
+  </section>
+
+  <section id="resultado" class="resultado" tabindex="-1" aria-live="polite" hidden></section>
+
+  <section class="explicacion">
+    <div>
+      <h2>Privado de verdad</h2>
+      <p>La página tiene prohibido por su política de seguridad enviar datos. Puedes comprobarlo en las herramientas del navegador.</p>
+    </div>
+    <div>
+      <h2>Te explica el porqué</h2>
+      <p>No es solo una nota. Señala cada indicio para que aprendas a reconocer el próximo engaño.</p>
+    </div>
+    <div>
+      <h2>No sustituye a tu criterio</h2>
+      <p>Usa reglas conocidas y puede equivocarse. Ante la duda, consulta el canal oficial o llama al 017.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Un proyecto de <a href="https://georgiweb.com">GeorgiWeb</a>. No está vinculado a INCIBE ni a ninguna empresa citada. <a href="privacidad.html">Privacidad y condiciones</a></p>
+</footer>
+<script src="analizador.js?v=2"></script>
+<script src="app.js"></script>
+</body>
+</html>

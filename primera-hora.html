@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La primera hora · Estafómetro</title>
+<meta name="description" content="Qué hacer en la primera hora si has caído en una estafa online.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="icono.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <a class="marca" href="index.html">Estafómetro</a>
+  <nav aria-label="Principal">
+    <a href="index.html">Analizar</a>
+    <a href="privacidad.html">Privacidad</a>
+  </nav>
+</header>
+
+<main class="estrecho">
+  <h1>La primera hora</h1>
+  <p class="entradilla">Respira. Caer le pasa a mucha gente y actuar rápido reduce el daño. Sigue los pasos que correspondan a tu caso.</p>
+
+  <aside class="aviso-017">
+    <strong>Línea 017 de INCIBE</strong>
+    <p>Ayuda gratuita y confidencial en ciberseguridad. Llama al <a href="tel:017">017</a>, por WhatsApp al 900 116 117 o por Telegram a @INCIBE017.</p>
+  </aside>
+
+  <details open>
+    <summary>He dado datos de mi tarjeta o de mi banco</summary>
+    <ol>
+      <li>Llama a tu banco por el teléfono oficial de su web o de tu tarjeta. Pide bloquear la tarjeta y revisar los movimientos.</li>
+      <li>Cambia la contraseña de la banca online desde la aplicación oficial.</li>
+      <li>Si hay cargos que no reconoces, pide por escrito que los anulen.</li>
+      <li>Guarda el mensaje y los movimientos, y denuncia.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>He hecho un Bizum o una transferencia</summary>
+    <ol>
+      <li>Avisa a tu banco cuanto antes e indica la fecha, la hora, el importe y el destino.</li>
+      <li>Guarda capturas de la conversación y del justificante.</li>
+      <li>Denuncia y entrega la copia de la denuncia al banco.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>He dado una contraseña o un código</summary>
+    <ol>
+      <li>Cambia esa contraseña desde la web oficial, y en cualquier otro servicio donde la repitas.</li>
+      <li>Activa la verificación en dos pasos.</li>
+      <li>Cierra las sesiones abiertas en los ajustes de la cuenta.</li>
+      <li>Si te han quitado WhatsApp, avisa a tus contactos por otra vía para que no te crean.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>He instalado una app o abierto un archivo</summary>
+    <ol>
+      <li>Desconecta el dispositivo de internet: modo avión o WiFi apagada.</li>
+      <li>Desde otro dispositivo limpio, cambia las contraseñas del banco y del correo.</li>
+      <li>No borres nada todavía si vas a denunciar. Pide ayuda al 017 o a un técnico de confianza.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>Me están amenazando o extorsionando</summary>
+    <ol>
+      <li>No pagues ni respondas. Pagar no garantiza que paren.</li>
+      <li>Guarda los mensajes y bloquea al remitente.</li>
+      <li>Si la amenaza es creíble o hay imágenes tuyas, denuncia y llama al 017.</li>
+    </ol>
+  </details>
+
+  <section class="cronologia">
+    <h2>Tu cronología</h2>
+    <p>Apunta lo ocurrido mientras lo recuerdas. Te ayudará al hablar con el banco o al denunciar. Se queda en esta página y desaparece al cerrarla.</p>
+    <form id="form-cronologia" class="fila-cronologia">
+      <div>
+        <label for="momento">Fecha y hora</label>
+        <input id="momento" type="datetime-local" required>
+      </div>
+      <div class="ancha">
+        <label for="hecho">Qué pasó</label>
+        <input id="hecho" type="text" maxlength="300" required placeholder="Recibí un SMS del supuesto banco y pulsé el enlace">
+      </div>
+      <button class="principal" type="submit">Añadir</button>
+    </form>
+    <ol id="lista-cronologia" class="lista-cronologia"></ol>
+    <div class="acciones">
+      <button id="copiar" type="button">Copiar</button>
+      <button id="imprimir" type="button">Imprimir o guardar PDF</button>
+    </div>
+    <p id="estado-copia" class="nota" role="status"></p>
+    <p class="nota">Esto es un resumen personal y no tiene valor de prueba pericial. Conserva también los mensajes y justificantes originales.</p>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Un proyecto de <a href="https://georgiweb.com">GeorgiWeb</a>. Orientación general, no asesoramiento legal. <a href="privacidad.html">Privacidad y condiciones</a></p>
+</footer>
+<script src="cronologia.js"></script>
+</body>
+</html>
